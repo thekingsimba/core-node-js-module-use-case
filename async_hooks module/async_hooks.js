@@ -51,6 +51,7 @@ const executeSetTimeout = () => {
 
 executeSetTimeout();
 
+
 // ================================================================================
 // we can also call the different event directly from AsyncResource instance
 // Demonstrate the creation and destruction of an asynchronous resource
@@ -62,5 +63,6 @@ asyncResource.emitDestroy();
 
 
 
+clearTimeout(executeSetTimeout);
 // Disable the async hook
 asyncHook.disable();
