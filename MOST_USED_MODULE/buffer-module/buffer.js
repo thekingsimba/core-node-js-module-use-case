@@ -1,4 +1,4 @@
-const Buffer = require('buffer');
+const BufferObject = require('buffer');
 
 // Objects:============================================================================
 // 1. Buffer: The primary object representing a fixed-size chunk of memory.
@@ -7,28 +7,28 @@ const Buffer = require('buffer');
 // 1. Buffer.alloc(size[, fill[, encoding]]):
 // Creates a new Buffer of the specified size.
 const buf1 = Buffer.alloc(5, 'a', 'utf8');
-console.log(buf1);
+console.log("Buffer.alloc(size[, fill[, encoding]])", buf1);
 
 // 2. Buffer.allocUnsafe(size):
 // Creates a new Buffer of the specified size, but the contents are uninitialized and can contain sensitive data.
 const buf2 = Buffer.allocUnsafe(10);
-console.log(buf2);
+console.log(" 2. Buffer.allocUnsafe(size) ",buf2);
 
 // 3. Buffer.allocUnsafeSlow(size):
 // Similar to Buffer.allocUnsafe, but intentionally slower to ensure that the memory is initialized.
 const buf3 = Buffer.allocUnsafeSlow(10);
-console.log(buf3);
+console.log(" 3. Buffer.allocUnsafeSlow(size)",buf3);
 
 // 4. Buffer.byteLength(string[, encoding]):
 // Gives the actual byte length of a string.
 const str = 'Hello World!';
-console.log(Buffer.byteLength(str, 'utf8'));
+console.log("4. Buffer.byteLength", Buffer.byteLength(str, 'utf8'));
 
 // 5. Buffer.compare(buf1, buf2):
 // Compares two buffers and returns a number indicating whether one comes before, after, or is the same as the other.
 const buf4 = Buffer.from('aBC');
 const buf5 = Buffer.from('abc');
-console.log(Buffer.compare(buf4, buf5));
+console.log("5. Buffer.compare", Buffer.compare(buf4, buf5));
 
 // 6. Buffer.concat(list[, totalLength]):
 // Concatenates an array of Buffer objects.

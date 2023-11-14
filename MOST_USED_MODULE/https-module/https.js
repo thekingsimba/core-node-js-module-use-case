@@ -12,7 +12,6 @@ const server = https.createServer(options, (req, res) => {
 server.listen(443);
 // =========================================================
 
-const https = require('https');
 
 // https.Server
 // Creating a simple HTTPS server that responds with 'Hello World!' for any request
